@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" v-model="userNumber" name="" id="" value="" />
+			{{userNumber}}
+			<div v-for="country in countrys">
+				<div v-if="userNumber==country.code">
+					代号：{{country.code}}
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			let v =new Vue({
+				el:'#app',
+				data:{
+					userNumber:'',
+					students:[
+					{name:"中国",code:"86"},
+					{name:"美国",code:"40"},
+					{name:"英国",code:"44"},
+					{name:"法国",code:"23"},
+					{name:"缅甸",code:"56"}
+					]
+				}
+			})
+		</script>
+	</body>
+</html>
